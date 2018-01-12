@@ -1,0 +1,389 @@
+* {
+ cursor:pointer;
+
+}
+body {
+    height: 100vh;
+    background-color: rgb(233, 232, 98);
+    padding-top: 25px;
+}
+
+#intro {
+        z-index: 2005;
+        position: absolute;
+        top: 5%;
+        margin-left: 5%;
+        max-width: 1000px;
+        display: none;
+}
+
+#wins  {
+        z-index: 2003;
+        position: absolute;
+        padding-top: 100px;
+        margin: 0% 0% 0 5%;
+        max-width: 800px;
+        display: none;
+        color: black;
+        font-size: 100px;
+        font-family: 'Bungee', cursive;
+}
+
+#playAgain  {
+        z-index: 2003;
+        position: absolute;
+        max-width: 800px;
+        margin: 0% 5% 0 5%;
+        padding-top: 230px;
+        display: none;
+        color: black;
+        font-size: 30px;
+        font-family: 'Bungee', cursive;
+}
+
+#introoverlay {
+        background-color: rgb(233, 232, 98);
+        z-index: 2000;
+        height: 130vh;
+        width: 100%;
+        position: absolute;
+}
+
+/*//flash*/
+
+.flash {display: none}
+.flash.active {display: block}
+
+
+/*blink*/
+.blink_me {
+  opacity: 0;
+  animation: blinker 1s linear infinite;
+}
+
+
+@keyframes blinker {
+  from,
+  49.9% {
+    opacity: 0;
+  }
+  50%,
+  to {
+    opacity: 1;
+  }
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 100px;
+    font-family: 'Bungee', cursive;
+    margin-bottom: 0px;
+    padding-top: 100px;
+    /*max-width: 400px;*/
+}
+
+
+
+h1 span {
+    /*background-color: black;
+    color: white;*/
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bungee';
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-weight: 100;
+    margin: 70px 0 20px 20px;
+}
+
+h3 {
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Bungee', cursive;
+}
+
+#menu-container {
+z-index: 4000;
+height: 400px;
+width: 400px;
+
+}
+
+
+#turn {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    /*font-family: 'Bungee', cursive;*/
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+}
+
+
+.restart {
+    font-family: 'Bungee', cursive;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    z-index: 6000;
+}
+
+.restart span {
+    /*color: white;
+    background-color: black;*/*/
+    padding: .3em;
+}
+
+h4 {
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+}
+
+#board {
+    margin: -10px 30px 0 30px;
+    transform: rotate(90deg);
+    z-index: 0;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.slot {
+    width: 70px;
+    height: 70px;
+    /*background: rgb(134, 189, 175);*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.circle {
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 0%;
+    align-self: center;
+    cursor: pointer;
+    transition: border-radius 0.8s ease;
+}
+
+
+.circleAnim {
+  border-radius: 50% !important;
+}
+
+.red .circle {
+    background: rgb(222, 54, 54);
+    border-radius: 50% !important;
+
+}
+
+.black .circle {
+    background: rgb(55, 55, 55);
+    border-radius: 50% !important;
+}
+
+@media only screen and (max-width: 769px) {
+
+
+    #wins {
+        font-size: 70px;
+    }
+
+    #playAgain {
+        font-size: 25px;
+        margin: 0% 5% 0 5%;
+        padding-top: 200px;
+    }
+
+}
+
+
+@media only screen and (max-width: 712px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    #wins {
+        top:0;
+        font-size: 80px;
+       }
+
+    #playAgain {
+        font-size: 25px;
+        margin: 0% 5% 0 5%;
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+
+
+    #wins {
+        top:0;
+       }
+
+    #playAgain {
+        font-size: 25px;
+        margin: 0% 5% 0 5%;
+        padding-top: 70px;
+    }
+}
+
+
+
+@media only screen and (max-width: 530px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #board {
+        margin: 1em 1em 1em 1em;
+    }
+
+    .slot {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+
+    }
+    #wins {
+        top:0;
+       }
+
+    #playAgain {
+        font-size: 25px;
+        margin: 0% 5% 0 5%;
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    h1 {
+        padding-top: 0px;
+    }
+    #wins {
+        top:0;
+       }
+    #playAgain {
+        font-size: 25px;
+        margin: 0% 5% 0 5%;
+        padding-top: 70px;
+    }
+
+    #board {
+        /*height: 0px;*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .slot {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+
+    h1 {
+        font-size: 10px;
+    }
+
+
+    #wins {
+        top:0;
+       }
+
+    #playAgain {
+        font-size: 10px;
+        margin: 0% 5% 0 5%;
+        padding-top: 70px;
+    }
+
+    #board {
+        /*height: 0px;*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .slot {
+        width: 30px;
+        height: 30px;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+@media only screen and (max-width: 350px) and (min-width: 200px) {
+
+    h1 {
+        font-size: 60px;
+        max-width: 100px;
+    }
+
+
+    h2{
+        top: 0;
+        margin-top: 70px;
+    }
+
+    h3 {
+        margin-top: 0;
+/*=        padding-top: 0px;*/
+
+    }
+
+    #playAgain {
+        margin: 0% 5% 0 5%;
+        padding-top: 80px;
+    }
+
+    #board {
+        /*height: 0px;*/
+        margin: .5em .5em .5em .5em;
+    }
+
+    .slot {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle {
+        width: 27px;
+        height: 27px;
+
+    }
+
+}
