@@ -1,7 +1,4 @@
-* {
- cursor:pointer;
 
-}
 body {
     height: 100vh;
     background-color: rgb(233, 232, 98);
@@ -47,6 +44,7 @@ body {
         height: 130vh;
         width: 100%;
         position: absolute;
+        cursor: pointer;
 }
 
 /*//flash*/
@@ -134,6 +132,7 @@ width: 400px;
     letter-spacing: 3px;
     cursor: pointer;
     z-index: 6000;
+    padding: 15px;
 }
 
 .restart span {
