@@ -7,3 +7,5 @@ Two players (black and red) take turns, attempting to place four pieces in a row
 
 ## Technologies
 * JavaScript, HTML, CSS
+
+# Preview
