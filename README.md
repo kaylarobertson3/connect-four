@@ -16,7 +16,7 @@ Two players (black and red) take turns, attempting to place four pieces in a row
 ![Connect Four Preview](https://github.com/kaylarobertson3/connect-four/blob/master/preview.gif
  "Connect Four Preview")
 
-*Mobile:
+* Mobile:
 
 
 ![Connect Four Mobile Preview](https://github.com/kaylarobertson3/connect-four/blob/master/mobile-preview.gif
