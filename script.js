@@ -118,7 +118,7 @@ $('#intro').ready(function() {
                     diagTotal++;
 
                     if (diagTotal == 4) {
-                        console.log("vertical win");
+                        console.log("diag win");
                         $('#wins').fadeIn('fast');
                         $('#wins').html(currPlayer + ' wins!');
                         $('#playAgain').fadeIn('fast');
@@ -158,8 +158,20 @@ $('#intro').ready(function() {
                         diagTotal++;
 
                         if (diagTotal == 4) {
-                            console.log("Diagonal");
-                            $("#wins").html("<h1>thisappears<hi>").css({});
+                            console.log("Diagonal win");
+                            $('#wins').fadeIn('fast');
+                            $('#wins').html(currPlayer + ' wins!');
+                            $('#playAgain').fadeIn('fast');
+                            $('#playAgain').html("click to restart game");
+                            $('#introoverlay').show("fast");
+                            event.stopPropagation();
+                            $('body').on('click', function() {
+                                console.log("restart");
+                                for (var i = 0; i < slot.length; i++) {
+                                    location.reload();
+                                }
+                            });
+
                         } else if (!check[k].hasClass(currPlayer)) {
 
                             diagTotal = 0;
